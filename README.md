@@ -107,6 +107,23 @@ $ sudo apt-get install audacity
 Run audacity and record using this config:
 16KHz 16bit mono wav file
 
+#### For Building mozilla/Tensorflowr1.5.0
+Note: Make sure swap is ON and Performance config to MAX
+```
+$ cd $HOME/deepspeech/tensorflow
+$ bazel build -c opt --local_resources 3072,4.0,1.0 --verbose_failures --config=cuda //tensorflow/tools/pip_package:build_pip_package
+$ bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
+$ mv /tmp/tensorflow_pkg/tensorflow-*.whl $HOME/
+```
+To install in Python virtualEnv:
+```
+$ source ~/tf-venv-ds/bin/activate
+$ cd $HOME
+$ pip install tensorflow_warpctc-1.5.0-cp27-cp27mu-linux_aarch64.whl
+$ pip show tensorflow-warpctc
+$ python -c "import tensorflow as tf; print(tf.__version__)" 
+```
+
 ### Notes
 This Deepspeech installation procedure was derived from these discussion threads: 
 
