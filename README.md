@@ -11,7 +11,7 @@ Jetson TX2 is flashed with JetPack 3.2 which installs:
 
 ### Pre-built installation
 
-If you are only interested in installing DeepSpeech on the TX2, not building from source, pre-built wheel files are available here: 
+If you are only interested in installing DeepSpeech on the TX2, not building from source, pre-built wheel files are available here: https://github.com/dwijaybane/installDeepSpeechTX2/releases
 
 If you are interested in building from source, read on.
 ### Preparation
@@ -29,7 +29,7 @@ After TensorFlow has finished building, the swap file is no longer needed and ma
 Go to location where swapfile is then
 `sudo swapoff swapfile`
 
-DeepSpeech v0.1.1 should be built in the following order:
+## DeepSpeech v0.1.1 should be built in the following order:
 
 #### installPrerequisites.sh
 Installs Java and other dependencies needed. Also builds Bazel version 0.11.1.
@@ -44,7 +44,7 @@ use in tensorflow.
 #### cloneTensorFlow.sh
 Git clones v1.5.0 from the mozilla/TensorFlow repository and patches the source code for aarch64
 
-## Build DeepSpeech
+### Build DeepSpeech
 Once the environment configured, it is time to build DeepSpeech.
 
 #### buildTensorFlow.sh
