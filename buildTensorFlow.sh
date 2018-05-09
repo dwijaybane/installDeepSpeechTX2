@@ -2,6 +2,7 @@
 # NVIDIA Jetson TX2
 # copy and replace tc-build.sh script in tensorflow
 INSTALL_DIR=$PWD
+rm $HOME/deepspeech/tensorflow/tc-build.sh
 cp -nrf $INSTALL_DIR/scripts/tc-build.sh $HOME/deepspeech/tensorflow/
 # Build Tensorflow
 cd $HOME/deepspeech/tensorflow
